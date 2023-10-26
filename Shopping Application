@@ -1,0 +1,84 @@
+import json
+supplier_data = json.loads(
+'
+{"parts": ["sprocket", "gizmo", "widget", "dodad"], "sprocket": {"price": 3.99, "quantity": 32}, "gizmo": 
+{"price": 7.98, "quantity": 2}, "widget": {"price": 14.32, "quantity": 4}, "dodad": {"price": 0.5, "quantity": 0}}
+'
+)
+selected_items = {}
+print("Welcome to the parts ordering system, please enter in a part name, followed by a quantity\n")
+print("Parts for order are:\n")
+print("sprocket\n")
+print("gizmo\n")
+print("widget\n")
+print("dodad\n")
+while True:
+ 
+user_input = input("Enter the name of the item or enter quit to finish shopping:")
+ 
+if user_input == "quit":
+ 
+break
+ 
+if user_input in supplier_data["parts"]
+:
+ 
+available_quantity = supplier_data[user_input]
+["quantity"]
+ 
+quantity = input(f"How many {user_input}s would you like to purchase? (Available: {available_quantity})
+:")
+ 
+ 
+if quantity.isnumeric()
+:
+ 
+quantity = int(quantity)
+ 
+if 0 <= quantity <= available_quantity:
+ 
+if user_input in selected_items:
+ 
+selected_items[user_input] += quantity
+ 
+else:
+ 
+selected_items[user_input] = quantity
+ 
+supplier_data[user_input]
+["quantity"] -= quantity
+ 
+else:
+ 
+print(f"Error: Only {available_quantity} of {user_input} are available!\n")
+ 
+else:
+ 
+ 
+print("Invalid quantity. Please enter a valid number.\n")
+ 
+else:
+ 
+ 
+print("Invalid item. Please enter a valid item name.\n")
+total_cost = sum(supplier_data[item]
+["price"] * quantity for item, quantity in selected_items.items()
+)
+print("You have selected the following items:")
+for item, quantity in selected_items.items()
+:
+ 
+subtotal = supplier_data[item]
+["price"] * quantity
+ 
+ 
+print(f"{item} - {quantity} @ {supplier_data[item]
+[
+'price'
+]
+:
+.2f} = {subtotal:
+.2f}\n")
+print(f"Total cost: ${total_cost:
+.2f}\n")
+print("Thank you for using the parts ordering system!\n")
