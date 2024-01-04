@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Rafael Reis</h1>
 <h3 align="center">A Passionate Cybersecurity Student</h3>
 
-- 🌱 I’m currently learning **Java, React, Splunk**
+- 🌱 I’m currently learning **Perl and Splunk**
 
-- 💬 Ask me about **Python, Linux**
+- 💬 Ask me about **Python, Cybersecurity**
 
 - 📫 How to reach me **rafaelreis098@gmail.com**
 
